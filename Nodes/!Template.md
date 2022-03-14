@@ -1,7 +1,7 @@
 # `000` Needs Name
-Some description can go here about this node in general.
+Some description can go here about this node in general.  The Title can include a name (if defined)
 
-# Observations
+## Observations
 - Bullet point list of notes can go here
 
 ## Data
@@ -29,5 +29,5 @@ Known values:
 - `44`: Engine cranking
 - `84`: Engine running
 
-# Related Nodes
+## Related Nodes
 Links to other related nodes can go here.
