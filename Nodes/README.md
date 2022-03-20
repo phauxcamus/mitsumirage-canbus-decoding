@@ -35,6 +35,11 @@ Status Legend:
 |[236](#236-steering-adv)|🟨|Steering A/D/V|Chassis|
 |[255](#255)|🟨|||
 |[265](#265)|🟨|||
+|[300](#300)|🟨|||
+|[308](#308)|🟨|||
+|[311](#311)|🟨|||
+|[312](#312)|🟨|||
+|[315](#315)|🟨|||
 |325|🟥|||
 |328|🟥|||
 |330|🟥|||
@@ -339,6 +344,68 @@ Constant `00 00 3F FF 3F FF FF FF`
 - RPM, Load, Fuel?
 - Increases with RPM
 
+## `300`
+### Observations
+- Data is reported constantly and in sequence
+- No reaction
+
+### Data
+#### Data 1 (8 Bytes)
+`03 80 FF FF 1F FF 7F FA`
+
+#### Data 2 (8 Bytes)
+`34 00 FF FF 9F FF 7F FA`
+
+#### Data 3 (8 Bytes)
+`39 00 FF FF 9F FF 7F FA`
+
+#### Data 4 (8 Bytes)
+`3E 80 FF FF 1F FF 7F FA`
+
+## `308`
+### Observations
+- Increases with RPM
+
+### Data
+#### Data 1 (8 Bytes)
+Bytes: `00 02 CA 02 01 1F FF 00`
+1. Constant `00`
+2. Varies
+3. Varies
+4. Varies
+5. Varies
+6. Constant `1F`
+7. Constant `FF`
+8. Constant `00`
+
+## `311`
+### Observations
+- Medium Speed (10pps)
+
+### Data
+#### Data 1 (8 Bytes)
+Constant `00 DE 80 00 00 78 00 00`
+
+## `312`
+### Observations
+- Engine, RPM/Fuel
+
+## `315`
+### Data
+#### Data 1 (8 Bytes)
+1. Random?
+2. `00`
+3. `00`
+4. `00`
+5. Changes based on turn signal and headlight state:
+    - `00`: Everything off
+    - `09`: Running lights only (`01` is briefly seen when turning them off)
+    - `11`: Headlights on
+    - Turn Signals have multiple states depending on other lights being on, and alternate/blink.
+        |Side |Signal Only|w/ Running Lights|w/ Headlights|
+        |:----|:----------|:----------------|:------------|
+        |Left |`02`       |`0B` (+9)        |`13` (+8)    |
+        |Right|`04`       |`0D` (+9)        |`15` (+8)    |
 
 ## `424`
 ### Observations
