@@ -15,7 +15,14 @@ Status Legend:
 |[012](#012)|🟨|||
 |[017](#017)|🟨|||
 |[101](#101-engine-state)|🟩|Engine State|Engine|
+|[152](#152)|🟨|||
+|[154](#154)|🟨|||
+|[185](#185-climate-control)|🟨|Climate Control|Infotainment|
+|[186](#186-chimebeep)|🟨|Chime/Beep|Infotainment|
+|[1B6](#1B6)|🟨|||
+|[1C2](#1C2)|🟨|||
 |[1D0](#1D0)|🟨|||
+|[1D1](#1D1)|🟨|||
 |325|🟥|||
 |328|🟥|||
 |330|🟥|||
@@ -86,6 +93,67 @@ Known States:
 - `44`: Engine cranking
 - `84`: Engine running
 
+## `152`
+### Observations
+- Slow (1pps)
+
+### Data
+#### Data 1 (8 Bytes)
+Bytes: `00 4C 01 71 00 00 00 00`
+1. Constant ``
+2. Shifts up and down between `4C` and `4E`
+3. Constant `01`
+4. Constant `71`
+5. Constant `00`
+6. Constant `00`
+7. Constant `00`
+8. Constant `00`
+
+## `154`
+### Data
+#### Data 1 (8 Bytes)
+Byte 1 shifts between 71 and 72
+
+## `185` Climate Control?
+### Data
+#### Data 1 (8 Bytes)
+Bytes: `03 00 00 00 01 00 00 00`
+1. Various, but shifts up one point when the AC Clutch is on
+2. Defrost Mode
+    - `00`: Off
+    - `01`: On
+3. Constant `00`
+4. Constant `00`
+5. AC Compressor Enabled (Snowflake icon)
+    - `00`: Off
+    - `01`: On
+6. Constant `00`
+7. Constant `00`
+8. Constant `00`
+
+
+## `186` Chime/Beep?
+### Data
+#### Data 1 (8 Bytes)
+Constant 8x `00`
+Byte 6: Number of Beeps
+
+## `1B6`
+### Observations
+- Slow (1pps)
+
+### Data
+#### Data 1 (8 Bytes)
+Constant `00 01 00 00 00 00 00 00`
+
+## `1C2`
+### Observations
+- Slow (1pps)
+
+### Data
+#### Data 1 (8 Bytes)
+Constant `00 24 0D 00 00 00 00 00`
+
 ## `1D0`
 ### Observations
 - The three packets of data repeat constantly all the time and are always in the same order
@@ -101,6 +169,14 @@ Constant `02 1F 1E 60 0E 64 0E 00`
 
 #### Data 2 (8 Bytes)
 Constant `02 6F 0E 7B 06 00 00 00`
+
+## `1D1`
+### Observations
+- Slow (2pps)
+
+### Data
+#### Data 1 (8 Bytes)
+Constant `01 09 00 80 69 88 00 55`
 
 
 ## `424`
