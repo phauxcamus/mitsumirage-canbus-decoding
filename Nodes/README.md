@@ -11,6 +11,9 @@ Status Legend:
 # Index
 |Node|Status|Name|Category|
 |:-|:-:|:-|:-:|
+|[008](#008)|🟨|||
+|[012](#012)|🟨|||
+|[017](#017)|🟨|||
 |[101](#101-engine-state)|🟩|Engine State|Engine|
 |[1D0](#1D0)|🟨|||
 |325|🟥|||
@@ -45,6 +48,30 @@ Status Legend:
 |7BC|🟥|||
 
 # Nodes
+
+## `008`
+### Observations
+- Slow (1pps)
+
+### Data
+#### Data 1 (8 Bytes)
+Constant `00 00 40 00 00 40 00 00`
+
+## `012`
+### Observations
+- Slow (1pps)
+
+### Data
+#### Data 1 (6 Bytes)
+Constant `00 00 00 00 00 00`
+
+## `017`
+### Observations
+- Slow (1pps)
+
+### Data
+#### Data 1 (4 Bytes)
+Constant 20 00 08 01
 
 ## `101` Engine State
 ### Observations
