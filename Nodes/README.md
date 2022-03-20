@@ -1,11 +1,11 @@
-This folder contains a file for every node decoded or seen.  Below is a table with statuses, serving as a basic TODO list.
+Below is a list of all the node addresses seen.  Larger/complex nodes are split off into their own files.
 
 Status Legend:
 ```
-🟥 No Data
-🟨 Seen and sample data is gathered
+🟥 Seen (No further action)
+🟨 Sample data gathered
 🟩 Some data is decoded and understood
-🟦  Decent understanding of how this node reports ("complete")
+🟦 Decent understanding of how this node reports ("complete")
 ```
 
 |Node|Status|Name|Loudness|
