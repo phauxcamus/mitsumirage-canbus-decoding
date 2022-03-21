@@ -60,6 +60,7 @@ Status Legend:
 |[451](#451)|🟨|||
 |[453](#453)|🟨|||
 |[454](#454)|🟨|||
+|[4A0](#4A0)|🟨|||
 |520|🟥|||
 |5FE|🟥|||
 |608|🟥|||
@@ -499,3 +500,18 @@ Constant `FD 14 3F FF FF FF FF FF`
 #### Data 1 (8 Bytes)
 Constant `FD 10 3F FF FF FF FF FF`
 
+## `4A0`
+### Observations
+- Medium Speed (10pps)
+
+### Data
+#### Data 1 (8 Bytes)
+Bytes: `22 DC 33 19 27 0A 00 40`
+1. Unknown
+2. Unknown
+3. Constant `33`
+4. Constant `19`
+5. Unknown
+6. Unknown
+7. Constant `00`
+8. Constnat `40`
