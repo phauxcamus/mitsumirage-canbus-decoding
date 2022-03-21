@@ -58,9 +58,8 @@ Status Legend:
 |[425](#425-external-access-state)|🟩|External Access State|Body|
 |[450](#450)|🟨|||
 |[451](#451)|🟨|||
-|453|🟥|||
-|454|🟥|||
-|4A0|🟥|||
+|[453](#453)|🟨|||
+|[454](#454)|🟨|||
 |520|🟥|||
 |5FE|🟥|||
 |608|🟥|||
@@ -481,3 +480,22 @@ Bytes:
 6. Constant `FF`
 7. Constant `FF`
 8. Constant `FF`
+
+## `453`
+### Observations
+- Slow (2pps)
+- Similar to [450](#450), [454](#454)
+
+### Data
+#### Data 1 (8 Bytes)
+Constant `FD 14 3F FF FF FF FF FF`
+
+## `454`
+### Observations
+- Slow (2pps)
+- Similar to [450](#450), [453](#453)
+
+### Data
+#### Data 1 (8 Bytes)
+Constant `FD 10 3F FF FF FF FF FF`
+
