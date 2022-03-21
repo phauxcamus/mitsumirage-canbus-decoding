@@ -53,6 +53,7 @@ Status Legend:
 |32B|🟥|||
 |3AC|🟥|||
 |[415](#415)|🟨|||
+|[418](#418)|🟨|||
 |[424](#424)|🟨|||
 |[425](#425-external-access-state)|🟩|External Access State|Body|
 |450|🟥|||
@@ -411,6 +412,17 @@ Constant `00 DE 80 00 00 78 00 00`
 #### Data 1 (8 Bytes)
 `00 00 00 00 00 00 C4 00`
 - Byte 7 shifts between `C4` and `C5`
+
+## `418`
+### Observations
+- Data is reported constantly and in sequence
+
+### Data
+#### Data 1 (8 Bytes)
+`50 FF 55 10 00 38 41 00`
+
+#### Data 2 (8 Bytes)
+`50 FF 55 10 00 20 41 00`
 
 ## `424`
 ### Observations
