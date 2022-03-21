@@ -56,7 +56,7 @@ Status Legend:
 |[418](#418)|🟨|||
 |[424](#424)|🟨|||
 |[425](#425-external-access-state)|🟩|External Access State|Body|
-|450|🟥|||
+|[450](#450)|🟨|||
 |[451](#451)|🟨|||
 |453|🟥|||
 |454|🟥|||
@@ -456,6 +456,15 @@ Bytes:
 
 ### Notes
 Door and Lock states are not fully mapped yet
+
+## `450`
+### Observations
+- Slow (2pps)
+- Similar to [453](#453), [454](#454)
+
+### Data
+#### Data 1 (8 Bytes)
+Constant `FD 11 3F FF FF FF FF FF`
 
 ## `451`
 ### Observations
